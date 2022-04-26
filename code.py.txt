@@ -1,0 +1,110 @@
+1 ) Concatenate or Merge Two or Multiple lists in Python?
+1) Using + Operator 
+
+I) # Initializing lists
+list1 = [2,3,4,2,2]
+list2 = [4,5,6,7,34,56]
+list3 = [1,5,33,2,34,46]
+
+# merge lists using + Operator
+newlist = list1 + list2 + list3
+
+# Print output
+print('Merged List: ',newlist)
+
+
+II) # Using extend function 
+
+# Initializing lists
+list1 = [2,3,4,2,2]
+list2 = [4,5,6,7,34,56]
+list3 = [4,67,2,2,4,66]
+
+# concatenate lists using extend()
+list1.extend(list2)
+list1.extend(list3)
+
+# Print output
+print('Concatenated List: ',list1)
+
+
+III) Using for loop:
+
+list1 = [1,3,4,5]
+list2 = [3,6,7,8,9]
+
+for i in list2:
+    list1.append(i)
+print(list1)
+
+IV) Using itertools.chain()
+l1 = list(itertools.chain(list1,list3,list2))
+print(l1)
+
+
+
+2) find even and odd number and sum of element in the list.
+
+
+num_list = []
+a = int(input("Enter the 1st range:"))
+b = int(input("enter last range:"))
+
+for i in range(a,b):
+    num_list.append(i)
+
+print(f" original list is::{num_list}")
+evenlist = []
+oddlist = []
+even_count = 0
+even_sum = 0
+odd_sum = 0
+for i in num_list:
+    if i%2==0:
+        evenlist.append(i)
+        even_sum = even_sum + i
+
+
+        even_count += 1 # for even count
+
+
+
+    else:
+        oddlist.append(i)
+        odd_sum = odd_sum + i
+
+
+print(f"even no:{evenlist}")
+print(f"Odd list: {oddlist}")
+print("Even count is :",even_count)
+print("even_sum:",even_sum)
+print("oddsum",odd_sum)
+
+
+3) Expecting a function to find the numbers divisible by 7 but not multiple of 5 between 2000 and 3200(both included) and printing a result numbers in comma separated new lines.
+	
+	
+
+def div(a,b):
+    list = []
+    for i in range(a,b+1):
+        if (i%7==0) and (i%5!=0):
+            list.append(i)
+    return list
+a = 2000
+b = 3200
+print(div(a,b))
+
+4) pyramid
+
+
+
+
+
+
+
+
+
+
+
+
